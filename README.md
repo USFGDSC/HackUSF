@@ -1,1 +1,1 @@
-###GDSC Hackathon Website
+GDSC Hackathon Website
