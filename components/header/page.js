@@ -3,7 +3,7 @@ import styles from "./page.module.css"
 import Image from "next/image"
 import { Button } from "@mui/material"
 import { Poppins } from "next/font/google"
-import { SignedIn, SignedOut } from "@clerk/nextjs"
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 import { useRouter } from "next/navigation"
 
 const poppins = Poppins({
@@ -24,7 +24,22 @@ export default function Header() {
                     <li><a href="#schedule">Schedule</a></li>
                     <li><a href="#prizes">Prizes</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <Button onClick={() => router.push("/sign-in")} variant="contained" sx={{ borderRadius: "2rem", fontFamily: poppins.style.fontFamily, textTransform: 'none', fontWeight: '500', fontSize: 'large' }}>Login</Button>
+                    <SignedOut>
+                        <Button onClick={() => router.push("/sign-in")} variant="contained" sx={{ borderRadius: "2rem", fontFamily: poppins.style.fontFamily, textTransform: 'none', fontWeight: '500', fontSize: 'large' }}>Login</Button>
+                    </SignedOut>
+
+                    <SignedIn>
+                    <UserButton
+                        appearance={{
+                        elements: {
+                            userButtonAvatarBox: {
+                            width: "48px", // Adjust size
+                            height: "48px",
+                            },
+                        },
+                        }}
+                    />
+                    </SignedIn>
                 </ul>
             </nav>
         </header>
