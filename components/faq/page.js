@@ -71,7 +71,7 @@ export default function FAQ() {
             boxShadow: 3, 
             transition: "0.3s",
             "&:hover": { boxShadow: 6 },
-            "&:before": { display: "none" }
+            "&:before": { display: "none" },
           }}
         >
           <AccordionSummary
@@ -79,12 +79,12 @@ export default function FAQ() {
             sx={{
               bgcolor: "#f5f5f5",
               paddingY: 1.5, 
-              "&:hover": { bgcolor: "#ebebeb" }
+              "&:hover": { bgcolor: "#ebebeb" },
             }}
           >
             <Typography 
               component="span" 
-              sx={{ fontWeight: 600, fontSize: "1.1rem" }}
+              sx={{ fontWeight: 600, fontSize: "1.1rem"}} 
             >
               {item.question}
             </Typography>

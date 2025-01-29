@@ -7,13 +7,6 @@ import styles from "./page.module.css";
 import Image from "next/image"
 
 import { Button, Typography } from "@mui/material/";
-import { Poppins } from "next/font/google";
-
-const poppins = Poppins({
-  variable: "--font-poppins",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
 
 export default function Home() {
   useEffect(() => {
@@ -64,7 +57,7 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.herolinks}>
-              <Button sx={{fontFamily: poppins.style.fontFamily, textTransform: 'none', color: 'black'}}>Apply Now</Button>
+              <Button sx={{ textTransform: 'none', color: 'black'}}>Apply Now</Button>
               <p>
                 Join the <a href="https://devpost.com/" target="_blank">Devpost</a> and <a href="https://discordapp.com/" target="_blank">Discord</a>!
               </p>
@@ -109,8 +102,8 @@ export default function Home() {
         </div>
 
         <div id="faq" className={styles.faq}>
-          <Typography sx={{ fontFamily: poppins.style.fontFamily, fontSize: "4rem", fontWeight: 600 }}>FAQ</Typography>
-          <Typography sx={{ fontFamily: poppins.style.fontFamily, fontSize: "1.2rem", mb: 3 }}>Everything you need to know about participating in HackUSF. If you have any other questions, <a href="mailto:gdscatusf@gmail.com">Contact Us!</a></Typography>
+          <Typography sx={{ fontSize: "4rem", fontWeight: 600 }}>FAQ</Typography>
+          <Typography sx={{ fontSize: "1.2rem", mb: 3 }}>Everything you need to know about participating in HackUSF. If you have any other questions, <a href="mailto:gdscatusf@gmail.com">Contact Us!</a></Typography>
           <FAQ />
         </div>
 
