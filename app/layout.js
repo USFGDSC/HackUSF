@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "HackUSF",
+  title: "HackUSF 2025",
   description: "GDSC at USF Offical Hackathon Website",
 };
 
