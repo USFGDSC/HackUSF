@@ -57,7 +57,28 @@ export default function Home() {
               </div>
             </div>
             <div className={styles.herolinks}>
-              <Button sx={{ textTransform: 'none', color: 'black'}}>Apply Now</Button>
+              <Button 
+                sx={{ 
+                  textTransform: 'none', 
+                  color: 'black',
+                  fontWeight: 700,
+                  fontSize: "1.4rem",
+                  borderRadius: "18px",
+                  boxShadow: '5px 5px 0px black',
+                  border: '3px solid black',
+                  backgroundColor: '#f8f8f8',
+                  transition: "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out",
+
+                  '&:hover': {
+                    transform: "translate(3px, 3px)", // Move button down & right
+                    boxShadow: "0px 0px 0px black", // Shrink shadow slightly
+                    border: '3px solid black',
+                  },
+                }}
+              >
+                Apply Now
+              </Button>
+
               <p>
                 Join the <a href="https://devpost.com/" target="_blank">Devpost</a> and <a href="https://discordapp.com/" target="_blank">Discord</a>!
               </p>

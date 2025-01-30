@@ -66,16 +66,18 @@ export default function FAQ() {
           key={index}
           sx={{ 
             mb: 3, 
-            borderRadius: 2, 
+            borderRadius: "8px", 
             overflow: "hidden", 
-            boxShadow: 3, 
-            transition: "0.3s",
-            "&:hover": { boxShadow: 6 },
+            backgroundColor: "#f8f8f8", // Light gray, gives a flat look
+            border: "3px solid black", // Thick, high-contrast border
+            boxShadow: "5px 5px 0px black", // Strong offset shadow
+            transition: "transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out",
+
             "&:before": { display: "none" },
           }}
         >
           <AccordionSummary
-            expandIcon={<ArrowDownwardIcon sx={{ color: "#1976D2" }} />}
+            expandIcon={<ArrowDownwardIcon sx={{ color: "black" }} />}
             sx={{
               bgcolor: "#f5f5f5",
               paddingY: 1.5, 
